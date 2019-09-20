@@ -31,5 +31,22 @@ namespace Library
 
             return result;
         }
+
+        public addContact(string name, string id, string phone)
+        {
+            Contact contact = new Contact(name, id, phone);
+            if (!this.persons.Contains(contact))
+            {
+                this.persons.Add(contact);
+            }
+        }
+
+        public removeContact(Contact contact)
+        {
+            if (this.persons.Contains(contact))
+            {
+                this.persons.Remove(contact);
+            }
+        }
     }
 }
