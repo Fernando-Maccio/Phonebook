@@ -6,9 +6,9 @@ namespace Library
     {
         private List<Contact> persons;
 
-        public Phonebook(Contact owner)
+        public Phonebook(string name, string phone, string id)
         {
-            this.Owner = owner;
+            this.Owner = CreateContact(name, phone, id);
             this.persons = new List<Contact>();
         }
 
@@ -32,21 +32,58 @@ namespace Library
             return result;
         }
 
-        public addContact(string name, string id, string phone)
+        public void AddContact(string name, string phone, string id)
         {
-            Contact contact = new Contact(name, id, phone);
+            Contact contact = CreateContact(name, phone,  id);
             if (!this.persons.Contains(contact))
             {
                 this.persons.Add(contact);
             }
         }
 
-        public removeContact(Contact contact)
+        public void RemoveContact(Contact contact)
         {
             if (this.persons.Contains(contact))
             {
                 this.persons.Remove(contact);
             }
+        }
+
+         public void SendWhatsAppMessage(string[] names, string text)
+        {
+            IMessageChannel messageChannel = new WhatsAppChannel();
+            foreach (Contact contact in this.persons)
+            {
+                foreach (string name in names)
+                {
+                    if (contact.Name.Equals(name))
+                    {
+                        Message message = new WhatsAppMessage(this.Owner.Phone, contact.Phone , text);
+                        messageChannel.Send(message);
+                    }
+                }
+            }
+        }
+
+        public void SendTwitterMessage(string[] names, string text)
+        {
+            IMessageChannel messageChannel = new TwitterChannel();
+            foreach (Contact contact in this.persons)
+            {
+                foreach (string name in names)
+                {
+                    if (contact.Name.Equals(name))
+                    {
+                        Message message = new twitterMessage(this.Owner.Id, contact.Id , text);
+                        messageChannel.Send(message);
+                    }
+                }
+            }
+        }
+        
+        private Contact CreateContact(string name, string phone, string id)
+        {
+            return new Contact(name, phone, id);
         }
     }
 }

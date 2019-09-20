@@ -1,6 +1,9 @@
+using System;
+
 namespace Library
+
 {
-    public class TwitterChannel :IMenssageChannel
+    public class TwitterChannel : IMessageChannel
     {
         string consumerKey = "g7rkPB5uI2xOqELAhlNrorSU4";
         string consumerKeySecret = "8hOTyS71GrTH9Ool3rXykAJRY5AmgSPiy78b1wYUPcvfIzXeEc";
@@ -9,7 +12,6 @@ namespace Library
 
         public TwitterChannel()
         {
-
         }
         public void Send(Message message)
         {

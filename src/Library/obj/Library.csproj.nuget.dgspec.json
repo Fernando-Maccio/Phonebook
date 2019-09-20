@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/fernando_maccio/Desktop/PII_Phonebook_Start-master/src/Library/Library.csproj": {}
+    "C:\\Users\\FIT\\Desktop\\Phonebook\\src\\Library\\Library.csproj": {}
   },
   "projects": {
-    "/Users/fernando_maccio/Desktop/PII_Phonebook_Start-master/src/Library/Library.csproj": {
+    "C:\\Users\\FIT\\Desktop\\Phonebook\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/fernando_maccio/Desktop/PII_Phonebook_Start-master/src/Library/Library.csproj",
+        "projectUniqueName": "C:\\Users\\FIT\\Desktop\\Phonebook\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "/Users/fernando_maccio/Desktop/PII_Phonebook_Start-master/src/Library/Library.csproj",
-        "packagesPath": "/Users/fernando_maccio/.nuget/packages/",
-        "outputPath": "/Users/fernando_maccio/Desktop/PII_Phonebook_Start-master/src/Library/obj/",
+        "projectPath": "C:\\Users\\FIT\\Desktop\\Phonebook\\src\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FIT\\Desktop\\Phonebook\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/fernando_maccio/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -44,6 +44,14 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[5.17.0, )"
             }
           },
           "imports": [
